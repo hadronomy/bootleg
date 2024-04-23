@@ -21,7 +21,7 @@ fn main() -> Result<()> {
         return Err(miette!(
             labels = vec![LabeledSpan::new(
                 Some("here".to_string()),
-                5,
+                7,
                 cli.text.as_ref().unwrap().len()
             )],
             "Cannot read from stdin and provide text at the same time."
