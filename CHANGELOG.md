@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2](https://github.com/Hadronomy/bootleg/compare/v0.1.1...v0.1.2) - 2024-04-24
+
+### Fixed
+- update examples binary name to be `bootleg`
+
+### Other
+- remove `ci` workflow
+- add `cargo-dist` workflow
+- update help image to match
+- fix placeholders not updated
+
 ## [0.1.1](https://github.com/Hadronomy/bootleg/compare/v0.1.0...v0.1.1) - 2024-04-24
 
 ### Other
