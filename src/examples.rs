@@ -17,17 +17,17 @@ impl Example {
 pub static EXAMPLES: &[Example] = &[
     Example::new(
         "Copy the text `Hello, world!` to the clipboard",
-        "clip \"Hello, world!\"",
+        "bootleg \"Hello, world!\"",
         "This will copy the text `Hello, world!` to the clipboard",
     ),
     Example::new(
         "Copy the contents of a file to the clipboard",
-        "clip < file.txt",
+        "bootleg < file.txt",
         "This will copy the contents of `file.txt` to the clipboard",
     ),
     Example::new(
         "Copy the output of a command to the clipboard",
-        r#"echo "Hello, world!" | clip"#,
+        r#"echo "Hello, world!" | bootleg"#,
         "This will copy the output of `echo \"Hello, world!\"` to the clipboard",
     ),
 ];
