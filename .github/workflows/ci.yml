@@ -23,7 +23,7 @@ defaults:
 jobs:
   upload-assets:
     name: ${{ matrix.target }}
-    if: github.repository_owner == 'MyOwner' && startsWith(github.event.release.name, 'my-bin-v')
+    if: github.repository_owner == 'Hadronomy' && startsWith(github.event.release.name, 'bootleg-v')
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -62,7 +62,7 @@ jobs:
         if: endsWith(matrix.target, 'windows-msvc')
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
-          bin: my-bin
+          bin: bootleg
           target: ${{ matrix.target }}
           tar: all
           zip: windows
