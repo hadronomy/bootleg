@@ -21,7 +21,6 @@ tracing-subscriber = "0.3.18"
 
 [profile.release]
 lto = true
-incremental = true
 
 [profile.dev]
 incremental = true
