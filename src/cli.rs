@@ -32,7 +32,7 @@ pub struct Args {
     /// Print help
     #[arg(short, long)]
     pub help: bool,
-    
+
     /// The text to copy to the clipboard
     #[arg(name = "TEXT")]
     pub text: Option<String>,
@@ -40,16 +40,17 @@ pub struct Args {
 
 /// Implements the `Args` struct and its associated methods.
 impl Args {
-    /// Initializes the command-line interface (CLI) and returns an `Option<Args>` object.
+    /// Initializes the command-line interface (CLI) and returns an `Args` object.
     /// ```
     /// let args = Args::init_cli();
     /// ```
-    ///
+    /// `exit` on error
+    /// 
     /// # Returns
     ///
-    /// - `Some(Args)`: If the CLI arguments were successfully parsed.
-    /// - `None`: If the `help` flag is set, the help message is printed and `None` is returned.
-    pub fn init_cli() -> Self {
+    /// An `Args` object with the parsed command-line arguments.
+    ///
+    pub fn init_cli() -> Args {
         let args = Self::parse();
         if args.help {
             Self::print_help();
