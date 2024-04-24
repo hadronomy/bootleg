@@ -10,9 +10,10 @@ arboard = "3.3.2"
 clap = { version = "4.5.4", features = ["derive"] }
 clap-help = "1.2.0"
 crossterm = "0.27.0"
-miette = { workspace = true, features = ["fancy"] }
+miette = { version = "7.2.0", features = ["fancy"] }
 termimad = "0.29.1"
 thiserror = "1.0.59"
-tracing.workspace = true
+tracing = "0.1.40"
 tracing-appender = "0.2.3"
-tracing-subscriber.workspace = true
+tracing-subscriber = "0.3.18"
+
