@@ -1,3 +1,7 @@
+use const_format::formatcp;
+
+use crate::build;
+
 pub struct Example {
     pub title: &'static str,
     pub cmd: &'static str,
@@ -17,17 +21,17 @@ impl Example {
 pub static EXAMPLES: &[Example] = &[
     Example::new(
         "Copy the text `Hello, world!` to the clipboard",
-        "bootleg \"Hello, world!\"",
+        formatcp!("{} \"Hello, world!\"", build::PROJECT_NAME),
         "This will copy the text `Hello, world!` to the clipboard",
     ),
     Example::new(
         "Copy the contents of a file to the clipboard",
-        "bootleg < file.txt",
+        formatcp!("{} < file.txt", build::PROJECT_NAME),
         "This will copy the contents of `file.txt` to the clipboard",
     ),
     Example::new(
         "Copy the output of a command to the clipboard",
-        r#"echo "Hello, world!" | bootleg"#,
+        formatcp!(r#"echo "Hello, world!" | {}"#, build::PROJECT_NAME),
         "This will copy the output of `echo \"Hello, world!\"` to the clipboard",
     ),
 ];

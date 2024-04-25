@@ -1,11 +1,14 @@
 use arboard::Clipboard;
 use miette::*;
+use shadow_rs::shadow;
 use std::io::{stdin, IsTerminal, Read};
 
 use cli::*;
 
 mod cli;
 mod examples;
+
+shadow!(build);
 
 fn main() -> Result<()> {
     let cli = Args::init_cli();
@@ -21,12 +24,12 @@ fn main() -> Result<()> {
         return Err(miette!(
             labels = vec![LabeledSpan::new(
                 Some("here".to_string()),
-                7,
+                build::PROJECT_NAME.len() + 1,
                 cli.text.as_ref().unwrap().len()
             )],
             "Cannot read from stdin and provide text at the same time."
         )
-        .with_source_code(format!("{} {}", "bootleg", cli.text.as_ref().unwrap())));
+        .with_source_code(format!("{} {}", build::PROJECT_NAME, cli.text.as_ref().unwrap())));
     }
     let mut buffer = String::new();
     stdin().read_to_string(&mut buffer).into_diagnostic()?;

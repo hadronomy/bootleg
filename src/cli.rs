@@ -1,15 +1,20 @@
+use crate::build;
 use crate::examples::*;
 
 use clap::{CommandFactory, Parser};
 use clap_help::Printer;
+use shadow_rs::formatcp;
 use termimad::ansi;
 
-static INTRO: &str = r#"
-*bootleg* is a cli tool for copying to the clipboard
+static INTRO: &str = formatcp!(
+    r#"
+*{}* is a cli tool for copying to the clipboard
 
 > **NOTE**: This is a work in progress and is missing some features.
 
-"#;
+"#,
+    build::PROJECT_NAME
+);
 
 static EXAMPLES_TEMPLATE: &str = "
 **Examples:**
@@ -27,7 +32,7 @@ ${example-cmd}
 ";
 
 #[derive(Parser, Debug)]
-#[command(name = "bootleg", author, version, about, disable_help_flag = true)]
+#[command(name = build::PROJECT_NAME, author, version, about, disable_help_flag = true)]
 pub struct Args {
     /// Print help
     #[arg(short, long)]
@@ -45,7 +50,7 @@ impl Args {
     /// let args = Args::init_cli();
     /// ```
     /// `exit` on error
-    /// 
+    ///
     /// # Returns
     ///
     /// An `Args` object with the parsed command-line arguments.

@@ -12,8 +12,10 @@ repository = "https://github.com/hadronomy/bootleg"
 arboard = "3.3.2"
 clap = { version = "4.5.4", features = ["derive"] }
 clap-help = "1.2.0"
+const_format = "0.2.32"
 crossterm = "0.27.0"
 miette = { version = "7.2.0", features = ["fancy"] }
+shadow-rs = "0.27.1"
 termimad = "0.29.1"
 thiserror = "1.0.59"
 tracing = "0.1.40"
@@ -45,3 +47,6 @@ targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-
 pr-run-mode = "plan"
 # Whether to install an updater program
 install-updater = true
+
+[build-dependencies]
+shadow-rs = "0.27.1"
