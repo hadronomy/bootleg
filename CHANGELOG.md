@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5](https://github.com/hadronomy/bootleg/compare/v0.1.4...v0.1.5) - 2024-07-22
+
+### Other
+- fix formatting
+- replace `bootleg` str literals with `build::PROJECT_NAME`
+
 ## [0.1.4](https://github.com/Hadronomy/bootleg/compare/v0.1.3...v0.1.4) - 2024-04-24
 
 ### Other
