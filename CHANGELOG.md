@@ -1,4 +1,5 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -6,31 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.5](https://github.com/hadronomy/bootleg/compare/v0.1.4...v0.1.5) - 2024-09-03
+## [0.1.6](https://github.com/hadronomy/bootleg/compare/v0.1.5...v0.1.6) - 2024-09-03
 
 ### Added
+
 - print the text on the clipboard when running without arguments
 
 ### Other
+
+- remove `x86_64-apple-darwin` target
 - fix formatting
 - replace `bootleg` str literals with `build::PROJECT_NAME`
 
 ## [0.1.4](https://github.com/Hadronomy/bootleg/compare/v0.1.3...v0.1.4) - 2024-04-24
 
 ### Other
+
 - disable github releases for `release-plz`
 
 ## [0.1.3](https://github.com/Hadronomy/bootleg/compare/v0.1.2...v0.1.3) - 2024-04-24
 
 ### Other
+
 - disable releases for `release_plz`
 
 ## [0.1.2](https://github.com/Hadronomy/bootleg/compare/v0.1.1...v0.1.2) - 2024-04-24
 
 ### Fixed
+
 - update examples binary name to be `bootleg`
 
 ### Other
+
 - remove `ci` workflow
 - add `cargo-dist` workflow
 - update help image to match
@@ -39,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.1](https://github.com/Hadronomy/bootleg/compare/v0.1.0...v0.1.1) - 2024-04-24
 
 ### Other
+
 - disable incremental compilation for release
 - add workflow to publish binaries
 - add incremental compilation
@@ -47,9 +56,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0](https://github.com/Hadronomy/bootleg/releases/tag/v0.1.0) - 2024-04-24
 
 ### Fixed
+
 - adjust error span len to match new name
 
 ### Other
+
 - add step to generate github token
 - run `release-plz init`
 - fix `Args::init_cli`
