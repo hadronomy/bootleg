@@ -17,7 +17,11 @@ fn main() -> Result<()> {
             let text = cli.text.unwrap();
             let mut clipboard = Clipboard::new().into_diagnostic()?;
             clipboard.set_text(&text).into_diagnostic()?;
+            return Ok(());
         }
+        let mut clipboard = Clipboard::new().into_diagnostic()?;
+        let text = clipboard.get_text().into_diagnostic()?;
+        print!("{}", text);
         return Ok(());
     }
     if cli.text.is_some() {

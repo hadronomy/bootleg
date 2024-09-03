@@ -20,6 +20,11 @@ impl Example {
 
 pub static EXAMPLES: &[Example] = &[
     Example::new(
+        "Print the text in the clipboard",
+        formatcp!("{}", build::PROJECT_NAME),
+        "This will print the text in the clipboard",
+    ),
+    Example::new(
         "Copy the text `Hello, world!` to the clipboard",
         formatcp!("{} \"Hello, world!\"", build::PROJECT_NAME),
         "This will copy the text `Hello, world!` to the clipboard",
