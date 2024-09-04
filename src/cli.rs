@@ -1,3 +1,5 @@
+use std::process;
+
 use crate::build;
 use crate::examples::*;
 
@@ -59,6 +61,7 @@ impl Args {
         let args = Self::parse();
         if args.help {
             Self::print_help();
+            process::exit(0)
         }
         args
     }
