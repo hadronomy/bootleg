@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8](https://github.com/hadronomy/bootleg/compare/v0.1.7...v0.1.8)
+
+### ⚙️ Miscellaneous Tasks
+
+- Fix changelog header - ([d8f7484](https://github.com/hadronomy/bootleg/commit/d8f74840f41f34e01112fedb8e97da2d0788b27a))
+- Improve changelog format - ([b8adcd8](https://github.com/hadronomy/bootleg/commit/b8adcd8dadd0832d743559d6b974d48b22a47cb0))
+
 ## [0.1.7](https://github.com/hadronomy/bootleg/compare/v0.1.6...v0.1.7) - 2024-09-04
 
 ### Fixed
