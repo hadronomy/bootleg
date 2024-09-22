@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.9](https://github.com/hadronomy/bootleg/compare/v0.1.8...v0.1.9)
+
+### ⚙️ Miscellaneous Tasks
+
+- Update `shadow-rs` to `0.35.0` - ([84366a1](https://github.com/hadronomy/bootleg/commit/84366a127eed84106db8f095346e0637355d623c))
+- Update dependencies - ([a889ea0](https://github.com/hadronomy/bootleg/commit/a889ea0f6c33fe5de5d2e5cfd16bd54f14da8f7b))
+
 ## [0.1.8](https://github.com/hadronomy/bootleg/compare/v0.1.7...v0.1.8)
 
 ### ⚙️ Miscellaneous Tasks
