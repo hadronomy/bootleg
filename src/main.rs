@@ -1,4 +1,5 @@
 use arboard::Clipboard;
+use crossterm::terminal::disable_raw_mode;
 use miette::*;
 use shadow_rs::shadow;
 use std::io::{stdin, IsTerminal, Read};
@@ -11,6 +12,12 @@ mod examples;
 shadow!(build);
 
 fn main() -> Result<()> {
+    let default_panic = std::panic::take_hook();
+    std::panic::set_hook(Box::new(move |info| {
+        let _ = disable_raw_mode();
+        default_panic(info);
+    }));
+
     let cli = Args::init_cli();
     if stdin().is_terminal() {
         if cli.text.is_some() {
