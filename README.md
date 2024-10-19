@@ -21,8 +21,7 @@
     A simple cli tool to copy everything directly from the terminal.
   </span>
   <p></p>
-  <a href="#docs">Docs</a> •
-  <a href="#build">Installation</a> •
+  <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
   <a href="#license">License</a>
   <hr />
