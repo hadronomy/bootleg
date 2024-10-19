@@ -1,10 +1,35 @@
 <div align="center">
+  <img src="/.github/images/github-header-image.webp" alt="GitHub Header Image" width="auto" />
+  
+  <!-- MIT License -->
+  <a href="https://github.com/hadronomy/bootleg/blob/main/LICENSE.txt">
+    <img
+      alt="Content License"
+      src="https://img.shields.io/github/license/hadronomy/bootleg?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41"
+    />
+  </a>
 
-# Bootleg
+  <!-- GitHub Repo Stars -->
+  <a href="https://github.com/hadronomy/bootleg/stargazers">
+    <img
+      alt="Stars"
+      src="https://img.shields.io/github/stars/hadronomy/bootleg?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41"
+    />
+  </a>
+  <p></p>
+  <span>
+    A simple cli tool to copy everything directly from the terminal.
+  </span>
+  <p></p>
+  <a href="#docs">Docs</a> •
+  <a href="#build">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#license">License</a>
+  <hr />
 
-Bootleg is a simple cli tool to copy to the clipboard.
+</div>
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hadronomy/bootleg/blob/main/LICENSE)
+
 
 ![the help flag output](.github/images/help.png)
 
