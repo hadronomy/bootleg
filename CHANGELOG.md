@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.11](https://github.com/hadronomy/bootleg/compare/v0.1.10...v0.1.11)
+
+### ⚙️ Miscellaneous Tasks
+
+- Update `cargo-dist` version and builder images - ([654c292](https://github.com/hadronomy/bootleg/commit/654c2927200ba858f2c4c178cb39b1612eb253bd))
+
 ## [0.1.10](https://github.com/hadronomy/bootleg/compare/v0.1.9...v0.1.10)
 
 ### ⚙️ Miscellaneous Tasks
