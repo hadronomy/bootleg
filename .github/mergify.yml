@@ -11,5 +11,6 @@ pull_request_rules:
       - -conflict # skip PRs with conflicts
       - -draft # skip GH draft PRs
       - -author=dependabot[bot] # skip dependabot PRs
+      - -author=hadronomy-bot[bot] # skip hadronomy-bot PRs
     actions:
       update:
