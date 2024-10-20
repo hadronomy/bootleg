@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.10](https://github.com/hadronomy/bootleg/compare/v0.1.9...v0.1.10)
+
+### ⚙️ Miscellaneous Tasks
+
+- Update mergify to ignore `hadronomy-bot` - ([48b299d](https://github.com/hadronomy/bootleg/commit/48b299d9096e79705eacfd22e8437909d98a92f7))
+- Add mergify config - ([30ec826](https://github.com/hadronomy/bootleg/commit/30ec826cb866d79de5fe13cdd72d88875750ee26))
+- Add dependabot config - ([81b2fc4](https://github.com/hadronomy/bootleg/commit/81b2fc4181a373b2c65f739860b0a91800befe92))
+- Fix link in `README` - ([7dad7d4](https://github.com/hadronomy/bootleg/commit/7dad7d41dc9eb7e29d3e0dde5114e12f95780341))
+- Add header to `README` - ([154c700](https://github.com/hadronomy/bootleg/commit/154c70055f2985978f17684ebfdc5a52a141580e))
+
 ## [0.1.9](https://github.com/hadronomy/bootleg/compare/v0.1.8...v0.1.9)
 
 ### ⚙️ Miscellaneous Tasks
