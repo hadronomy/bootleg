@@ -30,7 +30,16 @@
 
 
 
-![the help flag output](.github/images/help.png)
+<div align="center">
+
+  <img 
+    alt="program example" 
+    src="/.github/images/bootleg.gif" 
+    width="auto" 
+    height="auto"
+  />
+</div>
+
 
 </div>
 
