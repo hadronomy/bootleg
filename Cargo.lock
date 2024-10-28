@@ -163,7 +163,7 @@ dependencies = [
  "crossterm 0.28.1",
  "miette",
  "shadow-rs",
- "termimad 0.30.1",
+ "termimad",
  "thiserror",
  "tracing",
  "tracing-appender",
@@ -228,7 +228,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7dcdf9b61cc1b4c327e884e4de4f68f729b1ea5a80bc32e84c08f7bf2800a4bb"
 dependencies = [
  "clap",
- "termimad 0.31.0",
+ "termimad",
  "terminal-light",
 ]
 
@@ -1318,22 +1318,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
-]
-
-[[package]]
-name = "termimad"
-version = "0.30.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22117210909e9dfff30a558f554c7fb3edb198ef614e7691386785fb7679677c"
-dependencies = [
- "coolor 1.0.0",
- "crokey",
- "crossbeam",
- "lazy-regex",
- "minimad",
- "serde",
- "thiserror",
- "unicode-width",
 ]
 
 [[package]]
