@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.12](https://github.com/hadronomy/bootleg/compare/v0.1.11...v0.1.12)
+
+### 📚 Documentation
+
+- Add execution example to `README` - ([b26b7fc](https://github.com/hadronomy/bootleg/commit/b26b7fc56dfc8f2956ced91adc26cd2242d556fc))
+
 ## [0.1.11](https://github.com/hadronomy/bootleg/compare/v0.1.10...v0.1.11)
 
 ### ⚙️ Miscellaneous Tasks
