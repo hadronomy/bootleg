@@ -5,6 +5,13 @@ edition = "2021"
 license = "MIT"
 description = "A simple cli tool to copy to the clipboard"
 repository = "https://github.com/hadronomy/bootleg"
+authors = ["Pablo Hérnandez <noreply@hadronomy.com>"]
+
+[package.metadata.wix]
+upgrade-guid = "3078A9EB-4663-48ED-B068-20752B53B9BD"
+path-guid = "302878D0-C4C7-4771-87AA-FAFD5EF41422"
+license = false
+eula = false
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -32,26 +39,6 @@ incremental = true
 [profile.dist]
 inherits = "release"
 lto = "thin"
-
-# Config for 'cargo dist'
-[workspace.metadata.dist]
-# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
-cargo-dist-version = "0.23.0"
-# CI backends to support
-ci = ["github"]
-# The installers to generate for each app
-installers = ["shell", "powershell"]
-# Target platforms to build apps for (Rust target-triple syntax)
-targets = [
-  "x86_64-unknown-linux-gnu",
-  "x86_64-apple-darwin",
-  "x86_64-pc-windows-msvc",
-  "aarch64-apple-darwin",
-]
-# Publish jobs to run in CI
-pr-run-mode = "plan"
-# Whether to install an updater program
-install-updater = true
 
 [build-dependencies]
 shadow-rs = "0.35.2"
