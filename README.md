@@ -45,8 +45,23 @@
 
 ## Installation
 
+Its recommended to install the tool using [cargo-binstall](https://github.com/cargo-bins/cargo-binstall),
+a cargo plugin that installs binaries from crates.io.
+
 ```bash
-cargo install bootleg --locked
+cargo binstall bootleg --locked
+```
+
+Alternatively, you can install the tool using cargo.
+
+```bash
+cargo install bootleg
+```
+
+Or with the installation script.
+
+```bash
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/hadronomy/bootleg/releases/latest/download/bootleg-installer.sh | sh
 ```
 
 ## Usage
