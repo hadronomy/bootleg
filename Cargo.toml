@@ -23,7 +23,7 @@ const_format = "0.2.33"
 crossterm = "0.28.1"
 miette = { version = "7.2.0", features = ["fancy"] }
 shadow-rs = "0.36.0"
-termimad = "0.31.0"
+termimad = "0.31.1"
 thiserror = "2.0.3"
 tracing = "0.1.40"
 tracing-appender = "0.2.3"
