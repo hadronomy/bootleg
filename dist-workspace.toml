@@ -22,4 +22,4 @@ pr-run-mode = "plan"
 install-updater = true
 # Path that installers should place binaries in
 install-path = "CARGO_HOME"
-unix-archive = ".zip"
+# unix-archive = ".zip"
