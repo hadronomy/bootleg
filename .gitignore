@@ -16,7 +16,7 @@ target/
 *.pdb
 
 # mutants
-mutants.out/
+mutants.out*/
 
 # vscode
 .vscode/
