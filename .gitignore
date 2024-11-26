@@ -17,3 +17,6 @@ target/
 
 # mutants
 mutants.out/
+
+# vscode
+.vscode/
