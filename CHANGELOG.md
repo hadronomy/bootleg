@@ -7,6 +7,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.13](https://github.com/hadronomy/bootleg/compare/v0.1.12...v0.1.13)
+
+### 🚀 Features
+
+- Add wayy more information to `--version` flag - ([77a0cf6](https://github.com/hadronomy/bootleg/commit/77a0cf6218bccb165bc4d77abb8dd6342812058f))
+
+### 🐛 Bug Fixes
+
+- Fixup! chore: add `mutants.out` to `.gitignore` - ([14af37f](https://github.com/hadronomy/bootleg/commit/14af37fbb1a0fb9d04bebb6f621ab6572564fa36))
+
+### 🚜 Refactor
+
+- Split `main` function into multiple - ([0888f44](https://github.com/hadronomy/bootleg/commit/0888f44fc549f1a690617765842e7d8f606e1c91))
+
+### 👷 CI/CD
+
+- *(deps)* Bump tracing from 0.1.40 to 0.1.41 ([#37](https://github.com/hadronomy/bootleg/pull/37)) - ([8f648d3](https://github.com/hadronomy/bootleg/commit/8f648d393cddbaa3aead7b90fc9b43fc6910e7ad))
+- *(deps)* Bump miette from 7.2.0 to 7.3.0 ([#36](https://github.com/hadronomy/bootleg/pull/36)) - ([f07f1cf](https://github.com/hadronomy/bootleg/commit/f07f1cfc1c51759688fe0f6f2d02763ac5c946a2))
+- *(deps)* Bump termimad from 0.31.0 to 0.31.1 ([#35](https://github.com/hadronomy/bootleg/pull/35)) - ([739d3cb](https://github.com/hadronomy/bootleg/commit/739d3cb517be7cde73f85306330848a081035e25))
+- *(deps)* Bump shadow-rs from 0.35.2 to 0.36.0 ([#34](https://github.com/hadronomy/bootleg/pull/34)) - ([31da449](https://github.com/hadronomy/bootleg/commit/31da449c03f3f466681029beeb819f9e11ba069f))
+- *(deps)* Bump clap from 4.5.20 to 4.5.21 ([#33](https://github.com/hadronomy/bootleg/pull/33)) - ([3f51d48](https://github.com/hadronomy/bootleg/commit/3f51d48dcf15a861a8ad552300abe645eb726bfc))
+- *(deps)* Bump thiserror from 2.0.1 to 2.0.3 ([#32](https://github.com/hadronomy/bootleg/pull/32)) - ([c638b0c](https://github.com/hadronomy/bootleg/commit/c638b0cc90dcf46ef72ef680a2fb3187959a1e73))
+- *(deps)* Bump thiserror from 2.0.0 to 2.0.1 ([#31](https://github.com/hadronomy/bootleg/pull/31)) - ([2c50e8a](https://github.com/hadronomy/bootleg/commit/2c50e8a7a70e7b382eb4b3268263717447587b41))
+- *(deps)* Bump thiserror from 1.0.68 to 2.0.0 ([#30](https://github.com/hadronomy/bootleg/pull/30)) - ([331d894](https://github.com/hadronomy/bootleg/commit/331d8948aed20415555ef4745fa144bbe2de1ccb))
+- *(deps)* Bump thiserror from 1.0.66 to 1.0.68 ([#28](https://github.com/hadronomy/bootleg/pull/28)) - ([fe83526](https://github.com/hadronomy/bootleg/commit/fe83526df632c0a9560efb8d39a01668c0cf29ff))
+- Revert to `tar.gz` artifacts - ([e513a2a](https://github.com/hadronomy/bootleg/commit/e513a2a99685cb083c5dae3b7cefcc2fa2cc84fb))
+- Add wayyy more commit parsers to changelog config - ([790511b](https://github.com/hadronomy/bootleg/commit/790511b389664192da87519e0fd3c90db20c194c))
+
+### 📚 Documentation
+
+- Add alternative installation methods to `README` - ([2de5891](https://github.com/hadronomy/bootleg/commit/2de5891da2aa66a4ef5d366888f559b68edfe048))
+
+### 🧪 Testing
+
+- Add `print_help` test - ([f96a0fd](https://github.com/hadronomy/bootleg/commit/f96a0fd838ce405db343e62d41f73a8aed404bb3))
+
+### ⚙️ Miscellaneous Tasks
+
+- Add `.vscode` to `.gitignore` - ([8a53212](https://github.com/hadronomy/bootleg/commit/8a5321273883fd7781db6313dcae5ef3ac46f2e4))
+- Add `mutants.out` to `.gitignore` - ([19ef2e7](https://github.com/hadronomy/bootleg/commit/19ef2e79ee2f8150b6d9334582555d2d5db9ebf0))
+
 ## [0.1.12](https://github.com/hadronomy/bootleg/compare/v0.1.11...v0.1.12)
 
 ### 📚 Documentation
