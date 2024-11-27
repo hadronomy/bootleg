@@ -7,6 +7,10 @@ use clap::{CommandFactory, Parser};
 use clap_help::Printer;
 use shadow_rs::formatcp;
 use termimad::ansi;
+use owo_colors::{OwoColorize, Style};
+use supports_color::Stream;
+use std::fmt;
+
 
 static INTRO: &str = formatcp!(
     r#"
@@ -34,15 +38,19 @@ ${example-cmd}
 ";
 
 #[derive(Parser, Debug)]
-#[command(name = build::PROJECT_NAME, author, version, about, disable_help_flag = true)]
+#[command(name = build::PROJECT_NAME, author, about, disable_help_flag = true)]
 pub struct Args {
     /// Print help
     #[arg(short, long)]
     pub help: bool,
 
+    /// Print version
+    #[arg(short = 'V', long)]
+    pub version: bool,
+
     /// The text to copy to the clipboard
     #[arg(name = "TEXT")]
-    pub text: Option<String>,
+    pub text: Option<String>
 }
 
 /// Implements the `Args` struct and its associated methods.
@@ -61,6 +69,23 @@ impl Args {
         let args = Self::parse();
         if args.help {
             Self::print_help();
+            process::exit(0)
+        }
+        if args.version {
+            let mut version_info = VersionInfoDisplay::new();
+            let color = Color::Auto; // Example usage of Color enum
+            if color.supports_color_on(Stream::Stdout) {
+                version_info.colorize();
+            }
+            if build::BUILD_RUST_CHANNEL == "debug" {
+                let text = " DEBUG BUILD ";
+                if supports_color::on_cached(Stream::Stdout).is_some() {
+                    println!("{}", text.on_yellow().black().bold());
+                } else {
+                    println!("{}", text);
+                }
+            }
+            println!("{}", version_info);
             process::exit(0)
         }
         args
@@ -92,5 +117,85 @@ impl Args {
         skin.bold.set_fg(color);
         skin.italic = termimad::CompoundStyle::with_fg(color);
         printer.print_help();
+    }
+}
+
+#[derive(Debug, Default)]
+struct Styles {
+    name_style: Style,
+    value_style: Style,
+}
+
+impl Styles {
+    fn colorize(&mut self) {
+        self.name_style = Style::new().blue();
+        self.value_style = Style::new().yellow();
+    }
+}
+
+struct VersionInfoDisplay<'a> {
+    pkg_version: String,
+    branch: &'a str,
+    commit_hash: &'a str,
+    build_time: &'a str,
+    build_env: &'a str,
+    build_channel: &'a str,
+    styles: Box<Styles>,
+}
+
+impl<'a> VersionInfoDisplay<'a> {
+    fn new() -> Self {
+        #[allow(clippy::const_is_empty)]
+        let pkg_version = if build::TAG.is_empty() {
+            format!("{}-dev", build::PKG_VERSION)
+        } else {
+            build::PKG_VERSION.to_string()
+        };
+
+        Self {
+            pkg_version,
+            branch: build::BRANCH,
+            commit_hash: build::SHORT_COMMIT,
+            build_time: build::BUILD_TIME,
+            build_env: build::RUST_VERSION,
+            build_channel: build::RUST_CHANNEL,
+            styles: Box::default(),
+        }
+    }
+
+    fn colorize(&mut self) {
+        self.styles.colorize();
+    }
+}
+
+impl<'a> fmt::Display for VersionInfoDisplay<'a> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<12}: {}",
+            "pkg_version".style(self.styles.name_style), self.pkg_version.style(self.styles.value_style),
+            "branch".style(self.styles.name_style), self.branch.style(self.styles.value_style),
+            "commit_hash".style(self.styles.name_style), self.commit_hash.style(self.styles.value_style),
+            "build_time".style(self.styles.name_style), self.build_time.style(self.styles.value_style),
+            "build_env".style(self.styles.name_style), self.build_env.style(self.styles.value_style),
+            "build_channel".style(self.styles.name_style), self.build_channel.style(self.styles.value_style)
+        )
+    }
+}
+
+#[derive(Debug)]
+pub enum Color {
+    Always,
+    Auto,
+    Never,
+}
+
+impl Color {
+    fn supports_color_on(self, stream: Stream) -> bool {
+        match self {
+            Color::Always => true,
+            Color::Auto => supports_color::on_cached(stream).is_some(),
+            Color::Never => false,
+        }
     }
 }
