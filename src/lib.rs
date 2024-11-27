@@ -1,7 +1,7 @@
 use arboard::Clipboard;
 use miette::*;
 use shadow_rs::shadow;
-use std::io::{stdin, Read};
+use std::io::{stdin, IsTerminal, Read};
 
 use cli::*;
 
@@ -9,6 +9,15 @@ pub mod cli;
 mod examples;
 
 shadow!(build);
+
+/// Runs the program.
+pub fn run(cli: Args) -> Result<()> {
+    if stdin().is_terminal() {
+        handle_terminal_input(cli)
+    } else {
+        handle_non_terminal_input(cli)
+    }
+}
 
 /// Handles terminal input by either setting the clipboard text or printing the clipboard text.
 /// 
@@ -56,7 +65,7 @@ pub fn handle_non_terminal_input(cli: Args) -> Result<()> {
             cli.text.as_ref().unwrap()
         )));
     }
-    read_from_stdin_and_set_clipboard()
+    read_from_stdin_and_set_clipboard(stdin())
 }
 
 /// Sets the clipboard text.
@@ -94,7 +103,11 @@ pub fn print_clipboard_text() -> Result<()> {
     Ok(())
 }
 
-/// Reads from stdin and sets the clipboard text.
+/// Reads from a reader and sets the clipboard text.
+/// 
+/// # Arguments
+/// 
+/// * `reader` - The reader to read from.
 /// 
 /// # Returns
 /// 
@@ -102,12 +115,10 @@ pub fn print_clipboard_text() -> Result<()> {
 /// 
 /// # Errors
 /// 
-/// Returns an error if reading from stdin
+/// Returns an error if reading from the reader
 /// or setting the clipboard text fails.
-pub fn read_from_stdin_and_set_clipboard() -> Result<()> {
-  let mut buffer = String::new();
-  stdin().read_to_string(&mut buffer).into_diagnostic()?;
-  let mut clipboard = Clipboard::new().into_diagnostic()?;
-  clipboard.set_text(&buffer).into_diagnostic()?;
-  Ok(())
+pub fn read_from_stdin_and_set_clipboard<R: Read>(mut reader: R) -> Result<()> {
+    let mut buffer = String::new();
+    reader.read_to_string(&mut buffer).into_diagnostic()?;
+    set_clipboard_text(&buffer)
 }
