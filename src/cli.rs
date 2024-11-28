@@ -1,15 +1,15 @@
+use std::fmt;
 use std::process;
-
-use crate::build;
-use crate::examples::*;
 
 use clap::{CommandFactory, Parser};
 use clap_help::Printer;
 use owo_colors::{OwoColorize, Style};
 use shadow_rs::formatcp;
-use std::fmt;
 use supports_color::Stream;
 use termimad::ansi;
+
+use crate::build;
+use crate::examples::*;
 
 static INTRO: &str = formatcp!(
     r#"
