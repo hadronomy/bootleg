@@ -71,20 +71,7 @@ impl Args {
             process::exit(0)
         }
         if args.version {
-            let mut version_info = VersionInfoDisplay::new();
-            let color = Color::Auto; // Example usage of Color enum
-            if color.supports_color_on(Stream::Stdout) {
-                version_info.colorize();
-            }
-            if build::BUILD_RUST_CHANNEL == "debug" {
-                let text = " DEBUG BUILD ";
-                if supports_color::on_cached(Stream::Stdout).is_some() {
-                    println!("{}", text.on_yellow().black().bold());
-                } else {
-                    println!("{}", text);
-                }
-            }
-            println!("{}", version_info);
+            Self::print_version();
             process::exit(0)
         }
         args
@@ -117,7 +104,28 @@ impl Args {
         skin.italic = termimad::CompoundStyle::with_fg(color);
         printer.print_help();
     }
+
+    /// Prints the version information for the CLI.
+    pub fn print_version() {
+        let mut version_info = VersionInfoDisplay::new();
+        let color = Color::Auto;
+        // Example usage of Color enum
+        if color.supports_color_on(Stream::Stdout) {
+            version_info.colorize();
+        }
+        if build::BUILD_RUST_CHANNEL == "debug" {
+            let text = " DEBUG BUILD ";
+            if supports_color::on_cached(Stream::Stdout).is_some() {
+                println!("{}", text.on_yellow().black().bold());
+            } else {
+                println!("{}", text);
+            }
+        }
+        println!("{}", version_info);
+    }
 }
+
+
 
 #[derive(Debug, Default)]
 struct Styles {
