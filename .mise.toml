@@ -4,10 +4,14 @@
 "cargo:cargo-dist" = "^0.25.1"
 "cargo:bacon" = "latest"
 
+[tasks.default]
+description = "Run bacon"
+run = ["bacon"]
+
 [tasks.test]
 description = "Run tests"
 run = [
   "cargo clippy -- -D warnings",
   "cargo fmt -- --check",
-  "cargo nextest r --lib --tests"
+  "cargo nextest r --lib --tests",
 ]
