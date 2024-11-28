@@ -125,8 +125,6 @@ impl Args {
     }
 }
 
-
-
 #[derive(Debug, Default)]
 struct Styles {
     name_style: Style,
@@ -141,7 +139,7 @@ impl Styles {
 }
 
 struct VersionInfoDisplay<'a> {
-    pkg_version: String,
+    pkg_version: &'a str,
     branch: &'a str,
     commit_hash: &'a str,
     build_time: &'a str,
@@ -154,15 +152,22 @@ impl<'a> VersionInfoDisplay<'a> {
     fn new() -> Self {
         #[allow(clippy::const_is_empty)]
         let pkg_version = if build::TAG.is_empty() {
-            format!("{}-dev", build::PKG_VERSION)
+            formatcp!("{}-dev", build::PKG_VERSION)
         } else {
-            build::PKG_VERSION.to_string()
+            build::PKG_VERSION
+        };
+
+        #[allow(clippy::const_is_empty)]
+        let commit_hash = if !build::GIT_CLEAN {
+            formatcp!("{}+", build::SHORT_COMMIT)
+        } else {
+            build::SHORT_COMMIT
         };
 
         Self {
             pkg_version,
             branch: build::BRANCH,
-            commit_hash: build::SHORT_COMMIT,
+            commit_hash,
             build_time: build::BUILD_TIME,
             build_env: build::RUST_VERSION,
             build_channel: build::RUST_CHANNEL,
