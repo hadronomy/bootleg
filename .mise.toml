@@ -1,0 +1,13 @@
+[tools]
+"cargo:git-cliff" = "latest"
+"cargo:cargo-nextest" = "latest"
+"cargo:cargo-dist" = "^0.25.1"
+"cargo:bacon" = "latest"
+
+[tasks.test]
+description = "Run tests"
+run = [
+  "cargo clippy -- -D warnings",
+  "cargo fmt -- --check",
+  "cargo nextest r --lib --tests"
+]
