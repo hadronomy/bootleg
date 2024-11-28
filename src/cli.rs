@@ -5,12 +5,11 @@ use crate::examples::*;
 
 use clap::{CommandFactory, Parser};
 use clap_help::Printer;
-use shadow_rs::formatcp;
-use termimad::ansi;
 use owo_colors::{OwoColorize, Style};
-use supports_color::Stream;
+use shadow_rs::formatcp;
 use std::fmt;
-
+use supports_color::Stream;
+use termimad::ansi;
 
 static INTRO: &str = formatcp!(
     r#"
@@ -50,7 +49,7 @@ pub struct Args {
 
     /// The text to copy to the clipboard
     #[arg(name = "TEXT")]
-    pub text: Option<String>
+    pub text: Option<String>,
 }
 
 /// Implements the `Args` struct and its associated methods.
@@ -173,12 +172,18 @@ impl<'a> fmt::Display for VersionInfoDisplay<'a> {
         write!(
             f,
             "{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<12}: {}",
-            "pkg_version".style(self.styles.name_style), self.pkg_version.style(self.styles.value_style),
-            "branch".style(self.styles.name_style), self.branch.style(self.styles.value_style),
-            "commit_hash".style(self.styles.name_style), self.commit_hash.style(self.styles.value_style),
-            "build_time".style(self.styles.name_style), self.build_time.style(self.styles.value_style),
-            "build_env".style(self.styles.name_style), self.build_env.style(self.styles.value_style),
-            "build_channel".style(self.styles.name_style), self.build_channel.style(self.styles.value_style)
+            "pkg_version".style(self.styles.name_style),
+            self.pkg_version.style(self.styles.value_style),
+            "branch".style(self.styles.name_style),
+            self.branch.style(self.styles.value_style),
+            "commit_hash".style(self.styles.name_style),
+            self.commit_hash.style(self.styles.value_style),
+            "build_time".style(self.styles.name_style),
+            self.build_time.style(self.styles.value_style),
+            "build_env".style(self.styles.name_style),
+            self.build_env.style(self.styles.value_style),
+            "build_channel".style(self.styles.name_style),
+            self.build_channel.style(self.styles.value_style)
         )
     }
 }

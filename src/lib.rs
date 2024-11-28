@@ -20,13 +20,13 @@ pub fn run(cli: Args) -> Result<()> {
 }
 
 /// Handles terminal input by either setting the clipboard text or printing the clipboard text.
-/// 
+///
 /// # Arguments
-/// 
+///
 /// * `cli` - The command line arguments.
-/// 
+///
 /// # Returns
-/// 
+///
 /// * `Result<()>` - The result of the operation.
 pub fn handle_terminal_input(cli: Args) -> Result<()> {
     if let Some(text) = cli.text {
@@ -37,17 +37,17 @@ pub fn handle_terminal_input(cli: Args) -> Result<()> {
 }
 
 /// Handles non-terminal input by reading from stdin and setting the clipboard text.
-/// 
+///
 /// # Arguments
-/// 
+///
 /// * `cli` - The command line arguments.
-/// 
+///
 /// # Returns
-/// 
+///
 /// * `Result<()>` - The result of the operation.
-/// 
+///
 /// # Errors
-/// 
+///
 /// Returns an error if both stdin and text are provided.
 pub fn handle_non_terminal_input(cli: Args) -> Result<()> {
     if cli.text.is_some() {
@@ -69,17 +69,17 @@ pub fn handle_non_terminal_input(cli: Args) -> Result<()> {
 }
 
 /// Sets the clipboard text.
-/// 
+///
 /// # Arguments
-/// 
+///
 /// * `text` - The text to set in the clipboard.
-/// 
+///
 /// # Returns
-/// 
+///
 /// * `Result<()>` - The result of the operation.
-/// 
+///
 /// # Errors
-/// 
+///
 /// Returns an error if setting the clipboard text fails.
 pub fn set_clipboard_text(text: &str) -> Result<()> {
     let mut clipboard = Clipboard::new().into_diagnostic()?;
@@ -88,13 +88,13 @@ pub fn set_clipboard_text(text: &str) -> Result<()> {
 }
 
 /// Prints the clipboard text.
-/// 
+///
 /// # Returns
-/// 
+///
 /// * `Result<()>` - The result of the operation.
-/// 
+///
 /// # Errors
-/// 
+///
 /// Returns an error if getting the clipboard text fails.
 pub fn print_clipboard_text() -> Result<()> {
     let mut clipboard = Clipboard::new().into_diagnostic()?;
@@ -104,17 +104,17 @@ pub fn print_clipboard_text() -> Result<()> {
 }
 
 /// Reads from a reader and sets the clipboard text.
-/// 
+///
 /// # Arguments
-/// 
+///
 /// * `reader` - The reader to read from.
-/// 
+///
 /// # Returns
-/// 
+///
 /// * `Result<()>` - The result of the operation.
-/// 
+///
 /// # Errors
-/// 
+///
 /// Returns an error if reading from the reader
 /// or setting the clipboard text fails.
 pub fn read_from_stdin_and_set_clipboard<R: Read>(mut reader: R) -> Result<()> {
