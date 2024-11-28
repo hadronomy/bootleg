@@ -148,7 +148,7 @@ struct VersionInfoDisplay<'a> {
     styles: Box<Styles>,
 }
 
-impl<'a> VersionInfoDisplay<'a> {
+impl VersionInfoDisplay<'_> {
     fn new() -> Self {
         #[allow(clippy::const_is_empty)]
         let pkg_version = if build::TAG.is_empty() {
@@ -180,7 +180,7 @@ impl<'a> VersionInfoDisplay<'a> {
     }
 }
 
-impl<'a> fmt::Display for VersionInfoDisplay<'a> {
+impl fmt::Display for VersionInfoDisplay<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(
             f,
