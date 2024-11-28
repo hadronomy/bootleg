@@ -3,6 +3,7 @@
 "cargo:cargo-nextest" = "latest"
 "cargo:cargo-dist" = "^0.25.1"
 "cargo:bacon" = "latest"
+"cargo:cargo-machete" = "latest"
 
 [tasks.default]
 description = "Run bacon"
