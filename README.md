@@ -2,7 +2,7 @@
   <img src="/.github/images/github-header-image.webp" alt="GitHub Header Image" width="auto" />
   
   <!-- MIT License -->
-  <a href="https://github.com/hadronomy/bootleg/blob/main/LICENSE.txt">
+  <a href="https://github.com/hadronomy/bootleg/blob/main/LICENSE">
     <img
       alt="Content License"
       src="https://img.shields.io/github/license/hadronomy/bootleg?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41"
@@ -28,18 +28,16 @@
 
 </div>
 
-
-
 <div align="center">
 
-  <img 
+<img 
     alt="program example" 
     src="/.github/images/bootleg.gif" 
     width="auto" 
     height="auto"
   />
-</div>
 
+</div>
 
 </div>
 
