@@ -7,6 +7,74 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.13](https://github.com/hadronomy/bootleg/compare/v0.1.12...v0.1.13)
+
+### 🚀 Features
+
+- Add indicator to version commit if it was built with a dirty repo - ([422bc8d](https://github.com/hadronomy/bootleg/commit/422bc8d9db9f9bc547f42def2df905818a259d0d))
+- Add panic messages for humans - ([d38bbb2](https://github.com/hadronomy/bootleg/commit/d38bbb22ac6c9834e00ddf89f9995e5b763c0489))
+- Add wayy more information to `--version` flag - ([77a0cf6](https://github.com/hadronomy/bootleg/commit/77a0cf6218bccb165bc4d77abb8dd6342812058f))
+
+### 🐛 Bug Fixes
+
+- Fixup! chore: add `mutants.out` to `.gitignore` - ([14af37f](https://github.com/hadronomy/bootleg/commit/14af37fbb1a0fb9d04bebb6f621ab6572564fa36))
+
+### 📦 Bumps
+
+- Update toolchain from `1.81` to `1.83` - ([0133fae](https://github.com/hadronomy/bootleg/commit/0133fae5317e6f605ab7357af7ce0992e297b0e7))
+
+### 🚜 Refactor
+
+- Move print version logic to its own function - ([532f6f7](https://github.com/hadronomy/bootleg/commit/532f6f7e3c7e9cacf8d6c80b06a81d20ad0ff2d5))
+- Move `main.rs` to `src/bin/bootleg.rs` - ([1f5fe3a](https://github.com/hadronomy/bootleg/commit/1f5fe3a0006daf4856836c6b63f95ee56ab51430))
+- Split `main` function into multiple - ([0888f44](https://github.com/hadronomy/bootleg/commit/0888f44fc549f1a690617765842e7d8f606e1c91))
+
+### 👷 CI/CD
+
+- *(deps)* Bump const_format from 0.2.33 to 0.2.34 (#44) - ([6bedfab](https://github.com/hadronomy/bootleg/commit/6bedfab0a565ed93f07c9028415e5d435c5408fd))
+- *(deps)* Bump clap from 4.5.22 to 4.5.23 (#43) - ([039371d](https://github.com/hadronomy/bootleg/commit/039371db6b0a48e00e02abe58911159ad1e768c8))
+- *(deps)* Bump clap from 4.5.21 to 4.5.22 (#42) - ([6d60936](https://github.com/hadronomy/bootleg/commit/6d60936615fc1f4a56f0bc8cb847370e8cc76298))
+- *(deps)* Bump thiserror from 2.0.3 to 2.0.4 (#41) - ([a62cc79](https://github.com/hadronomy/bootleg/commit/a62cc790d624b1351977266d2256075db4f2c122))
+- *(deps)* Bump tracing-subscriber from 0.3.18 to 0.3.19 (#40) - ([36f94f6](https://github.com/hadronomy/bootleg/commit/36f94f6e35331932f9422b08fb0923a37278a1fc))
+- *(deps)* Bump miette from 7.3.0 to 7.4.0 (#38) - ([e9fe3d0](https://github.com/hadronomy/bootleg/commit/e9fe3d0d243d5055a7f5ca46cf62f824abc95a3b))
+- *(deps)* Bump tracing from 0.1.40 to 0.1.41 (#37) - ([8f648d3](https://github.com/hadronomy/bootleg/commit/8f648d393cddbaa3aead7b90fc9b43fc6910e7ad))
+- *(deps)* Bump miette from 7.2.0 to 7.3.0 (#36) - ([f07f1cf](https://github.com/hadronomy/bootleg/commit/f07f1cfc1c51759688fe0f6f2d02763ac5c946a2))
+- *(deps)* Bump termimad from 0.31.0 to 0.31.1 (#35) - ([739d3cb](https://github.com/hadronomy/bootleg/commit/739d3cb517be7cde73f85306330848a081035e25))
+- *(deps)* Bump shadow-rs from 0.35.2 to 0.36.0 (#34) - ([31da449](https://github.com/hadronomy/bootleg/commit/31da449c03f3f466681029beeb819f9e11ba069f))
+- *(deps)* Bump clap from 4.5.20 to 4.5.21 (#33) - ([3f51d48](https://github.com/hadronomy/bootleg/commit/3f51d48dcf15a861a8ad552300abe645eb726bfc))
+- *(deps)* Bump thiserror from 2.0.1 to 2.0.3 (#32) - ([c638b0c](https://github.com/hadronomy/bootleg/commit/c638b0cc90dcf46ef72ef680a2fb3187959a1e73))
+- *(deps)* Bump thiserror from 2.0.0 to 2.0.1 (#31) - ([2c50e8a](https://github.com/hadronomy/bootleg/commit/2c50e8a7a70e7b382eb4b3268263717447587b41))
+- *(deps)* Bump thiserror from 1.0.68 to 2.0.0 (#30) - ([331d894](https://github.com/hadronomy/bootleg/commit/331d8948aed20415555ef4745fa144bbe2de1ccb))
+- *(deps)* Bump thiserror from 1.0.66 to 1.0.68 (#28) - ([fe83526](https://github.com/hadronomy/bootleg/commit/fe83526df632c0a9560efb8d39a01668c0cf29ff))
+- Revert to `tar.gz` artifacts - ([e513a2a](https://github.com/hadronomy/bootleg/commit/e513a2a99685cb083c5dae3b7cefcc2fa2cc84fb))
+- Add wayyy more commit parsers to changelog config - ([790511b](https://github.com/hadronomy/bootleg/commit/790511b389664192da87519e0fd3c90db20c194c))
+
+### 📚 Documentation
+
+- Fix bad link in `README` - ([194fa41](https://github.com/hadronomy/bootleg/commit/194fa410e3d1edaa86f6908087492b19a3fe89de))
+- Add alternative installation methods to `README` - ([2de5891](https://github.com/hadronomy/bootleg/commit/2de5891da2aa66a4ef5d366888f559b68edfe048))
+
+### 🎨 Styling
+
+- Sort imports - ([ac985ad](https://github.com/hadronomy/bootleg/commit/ac985adef260703da0754c5676285e648f22ac22))
+- Elide lifetimes - ([0b5a15b](https://github.com/hadronomy/bootleg/commit/0b5a15b7992f5db96f62f1635b60652f7f672aff))
+- Fix formatting issues - ([c61dacc](https://github.com/hadronomy/bootleg/commit/c61dacce79e2b2da053ff92fab91272e143a2d2f))
+
+### 🧪 Testing
+
+- Add `print_help` test - ([f96a0fd](https://github.com/hadronomy/bootleg/commit/f96a0fd838ce405db343e62d41f73a8aed404bb3))
+
+### ⚙️ Miscellaneous Tasks
+
+- Set `clippy-all` as default bacon job - ([5248d6a](https://github.com/hadronomy/bootleg/commit/5248d6ab49c48de79ddfa36ea4185289ac6deb2e))
+- Rename `.mise.toml` to `mise.toml` - ([e9f0518](https://github.com/hadronomy/bootleg/commit/e9f051866e09f51e57f52a2196650454b783ced6))
+- Add `cargo-machete` to tools - ([e714034](https://github.com/hadronomy/bootleg/commit/e71403458c0b6281b2b682dcaed054fd188fb62a))
+- Add `bacon` as default mise task - ([ec033d4](https://github.com/hadronomy/bootleg/commit/ec033d4a79644cbe0ab330a1a1adcc1d43366ebe))
+- Add `.mise.toml` to manage tools and tasks - ([c7b81e3](https://github.com/hadronomy/bootleg/commit/c7b81e302b1ebfb4cbed58b01dcc5d4d4befc4a8))
+- Fix `bacon` configuration - ([7a80ac3](https://github.com/hadronomy/bootleg/commit/7a80ac307c1fa1d04a7d5afafa5f33140cf2e2fa))
+- Add `.vscode` to `.gitignore` - ([8a53212](https://github.com/hadronomy/bootleg/commit/8a5321273883fd7781db6313dcae5ef3ac46f2e4))
+- Add `mutants.out` to `.gitignore` - ([19ef2e7](https://github.com/hadronomy/bootleg/commit/19ef2e79ee2f8150b6d9334582555d2d5db9ebf0))
+
 ## [0.1.12](https://github.com/hadronomy/bootleg/compare/v0.1.11...v0.1.12)
 
 ### 📚 Documentation
