@@ -1,3 +1,6 @@
+use shadow_rs::ShadowBuilder;
+
 fn main() -> shadow_rs::SdResult<()> {
-    shadow_rs::new()
+    ShadowBuilder::builder().build().expect("Failed to build shadow.rs");
+    Ok(())
 }
