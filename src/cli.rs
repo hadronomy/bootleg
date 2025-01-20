@@ -4,8 +4,11 @@ use std::process;
 use clap::{CommandFactory, Parser};
 use clap_help::Printer;
 use owo_colors::{OwoColorize, Style};
+use serde::Serialize;
 use shadow_rs::formatcp;
 use supports_color::Stream;
+use taplo::formatter::Options;
+use taplo::rowan::{NodeOrToken, WalkEvent};
 use termimad::ansi;
 
 use crate::build;
@@ -109,16 +112,15 @@ impl Args {
     pub fn print_version() {
         let mut version_info = VersionInfoDisplay::new();
         let color = Color::Auto;
-        // Example usage of Color enum
         if color.supports_color_on(Stream::Stdout) {
             version_info.colorize();
         }
         if build::BUILD_RUST_CHANNEL == "debug" {
             let text = " DEBUG BUILD ";
             if supports_color::on_cached(Stream::Stdout).is_some() {
-                println!("{}", text.on_yellow().black().bold());
+                eprintln!("{}", text.on_yellow().black().bold());
             } else {
-                println!("{}", text);
+                eprintln!("{}", text);
             }
         }
         println!("{}", version_info);
@@ -138,13 +140,16 @@ impl Styles {
     }
 }
 
+#[derive(Debug, Serialize)]
 struct VersionInfoDisplay<'a> {
+    #[serde(rename = "version")]
     pkg_version: &'a str,
     branch: &'a str,
     commit_hash: &'a str,
     build_time: &'a str,
     build_env: &'a str,
     build_channel: &'a str,
+    #[serde(skip)]
     styles: Box<Styles>,
 }
 
@@ -182,22 +187,50 @@ impl VersionInfoDisplay<'_> {
 
 impl fmt::Display for VersionInfoDisplay<'_> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(
-            f,
-            "{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<13}: {}\n{:<12}: {}",
-            "pkg_version".style(self.styles.name_style),
-            self.pkg_version.style(self.styles.value_style),
-            "branch".style(self.styles.name_style),
-            self.branch.style(self.styles.value_style),
-            "commit_hash".style(self.styles.name_style),
-            self.commit_hash.style(self.styles.value_style),
-            "build_time".style(self.styles.name_style),
-            self.build_time.style(self.styles.value_style),
-            "build_env".style(self.styles.name_style),
-            self.build_env.style(self.styles.value_style),
-            "build_channel".style(self.styles.name_style),
-            self.build_channel.style(self.styles.value_style)
-        )
+        let toml = toml::to_string(&self).map_err(|_| fmt::Error)?;
+
+        if self.styles.name_style == Style::new() && self.styles.value_style == Style::new() {
+            return write!(f, "{}", toml);
+        }
+
+        let formatted = taplo::formatter::format(
+            &toml,
+            Options {
+                align_entries: true,
+                ..Default::default()
+            },
+        );
+        let syntax = taplo::parser::parse(&formatted);
+        if !syntax.errors.is_empty() {
+            return Err(fmt::Error);
+        }
+
+        let mut output = String::with_capacity(formatted.len());
+
+        let tokens = syntax
+            .into_syntax()
+            .preorder_with_tokens()
+            .filter_map(|event| match event {
+                WalkEvent::Enter(NodeOrToken::Token(token)) => Some(token),
+                _ => None,
+            });
+
+        for token in tokens {
+            let text = token.text();
+            match token.kind() {
+                taplo::syntax::SyntaxKind::STRING
+                | taplo::syntax::SyntaxKind::INTEGER
+                | taplo::syntax::SyntaxKind::FLOAT => {
+                    output.push_str(&text.style(self.styles.value_style).to_string());
+                }
+                taplo::syntax::SyntaxKind::IDENT | taplo::syntax::SyntaxKind::PERIOD => {
+                    output.push_str(&text.style(self.styles.name_style).to_string());
+                }
+                _ => output.push_str(text),
+            }
+        }
+
+        write!(f, "{}", output)
     }
 }
 
