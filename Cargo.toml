@@ -28,7 +28,7 @@ serde = { version = "1.0.217", features = ["derive"] }
 shadow-rs = "0.38.0"
 supports-color = "3.0.2"
 taplo = "0.13.2"
-termimad = "0.31.1"
+termimad = "0.31.2"
 thiserror = "2.0.11"
 toml = "0.8.19"
 tracing = "0.1.41"
