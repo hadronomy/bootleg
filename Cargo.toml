@@ -17,7 +17,7 @@ eula = false
 
 [dependencies]
 arboard = "3.4.1"
-clap = { version = "4.5.28", features = ["derive"] }
+clap = { version = "4.5.29", features = ["derive"] }
 clap-help = "1.3.1"
 const_format = "0.2.34"
 crossterm = "0.28.1"
