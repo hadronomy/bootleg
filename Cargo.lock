@@ -196,7 +196,7 @@ dependencies = [
 
 [[package]]
 name = "bootleg"
-version = "0.1.14"
+version = "0.1.15"
 dependencies = [
  "arboard",
  "assert_cmd",
