@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0](https://github.com/hadronomy/bootleg/compare/v0.1.14...v0.2.0)
+
+### 👷 CI/CD
+
+- *(deps)* Bump shadow-rs from 0.38.1 to 1.0.0 (#75) - ([bd46ee3](https://github.com/hadronomy/bootleg/commit/bd46ee382f4f0c0921a77f9fd2d3eb88fd26f2b1))
+- *(deps)* Bump clap from 4.5.30 to 4.5.31 (#74) - ([1c7a106](https://github.com/hadronomy/bootleg/commit/1c7a106a3eeb8da1ab7997bf7de9a78b10f6b055))
+- *(deps)* Bump serde from 1.0.217 to 1.0.218 (#73) - ([ba33cd0](https://github.com/hadronomy/bootleg/commit/ba33cd03730153dd2571b9971f799b1729330478))
+- *(deps)* Bump clap from 4.5.29 to 4.5.30 (#72) - ([a02c11b](https://github.com/hadronomy/bootleg/commit/a02c11bff50964da5ce20d0baeaa6ad06498dd3a))
+- *(deps)* Bump clap from 4.5.28 to 4.5.29 (#71) - ([5f57006](https://github.com/hadronomy/bootleg/commit/5f57006d116b0fb8166a69c90ffc900ee2947ab3))
+- *(deps)* Bump shadow-rs from 0.38.0 to 0.38.1 (#70) - ([cc81e79](https://github.com/hadronomy/bootleg/commit/cc81e791d43fb756ec7c222350c78a401e4bf690))
+- *(deps)* Bump toml from 0.8.19 to 0.8.20 (#69) - ([04276d9](https://github.com/hadronomy/bootleg/commit/04276d917d1639702c18932a9be85a971daf238f))
+- *(deps)* Bump clap from 4.5.27 to 4.5.28 (#68) - ([b9304c2](https://github.com/hadronomy/bootleg/commit/b9304c244dfe37d5110994251edfed6b0213140d))
+- *(deps)* Bump miette from 7.4.0 to 7.5.0 (#67) - ([9d04251](https://github.com/hadronomy/bootleg/commit/9d0425156e6eae0233a4c74eba580dcca4ac3d59))
+- *(deps)* Bump termimad from 0.31.1 to 0.31.2 (#66) - ([949ce63](https://github.com/hadronomy/bootleg/commit/949ce63aedbc5d20c5207c409e5373ae3f27c4d9))
+- *(deps)* Bump shadow-rs from 0.37.0 to 0.38.0 (#65) - ([75c2419](https://github.com/hadronomy/bootleg/commit/75c24192189dd31d9c175a7476070111d7002736))
+- *(deps)* Bump clap from 4.5.26 to 4.5.27 (#64) - ([5aea2c9](https://github.com/hadronomy/bootleg/commit/5aea2c9949c4392aa67a8ba94cf9f71350c045c9))
+- *(deps)* Bump actions/attest-build-provenance from 1 to 2 (#62) - ([43f3e47](https://github.com/hadronomy/bootleg/commit/43f3e47be1388e756e3ac7085bafecc13984c18f))
+
 ## [0.1.14](https://github.com/hadronomy/bootleg/compare/v0.1.13...v0.1.14)
 
 ### 🚀 Features
