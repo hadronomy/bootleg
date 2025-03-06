@@ -1,7 +1,7 @@
 [tools]
 "cargo:git-cliff" = "latest"
 "cargo:cargo-nextest" = "latest"
-"cargo:cargo-dist" = "^0.25.1"
+"cargo:cargo-dist" = "^0.28.0"
 "cargo:bacon" = "latest"
 "cargo:cargo-machete" = "latest"
 
