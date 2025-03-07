@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1](https://github.com/hadronomy/bootleg/compare/v0.2.0...v0.2.1)
+
+### 👷 CI/CD
+
+- *(deps)* Bump actions/attest-build-provenance from 1 to 2 ([#83](https://github.com/hadronomy/bootleg/pull/83)) - ([d3bad34](https://github.com/hadronomy/bootleg/commit/d3bad349812fd3c57ead42a6ed1bb3c3a3537436))
+
 ## [0.2.0](https://github.com/hadronomy/bootleg/compare/v0.1.14...v0.2.0)
 
 ### 👷 CI/CD
