@@ -24,7 +24,7 @@ crossterm = "0.28.1"
 human-panic = "2.0.2"
 miette = { version = "7.5.0", features = ["fancy"] }
 owo-colors = { version = "4.2.0", features = ["supports-colors"] }
-serde = { version = "1.0.218", features = ["derive"] }
+serde = { version = "1.0.219", features = ["derive"] }
 shadow-rs = "1.0.1"
 supports-color = "3.0.2"
 taplo = "0.13.2"
