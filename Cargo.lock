@@ -205,7 +205,7 @@ dependencies = [
  "shadow-rs",
  "supports-color 3.0.2",
  "taplo",
- "termimad 0.31.3",
+ "termimad",
  "thiserror 2.0.12",
  "toml",
  "tracing",
@@ -282,7 +282,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4f8b550b4d08a1d8101f3260bef3166a82c74c613486b4d63705244849105255"
 dependencies = [
  "clap",
- "termimad 0.32.0",
+ "termimad",
  "terminal-light",
 ]
 
@@ -1590,22 +1590,6 @@ dependencies = [
  "thiserror 1.0.68",
  "time",
  "tracing",
-]
-
-[[package]]
-name = "termimad"
-version = "0.31.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7301d9c2c4939c97f25376b70d3c13311f8fefdee44092fc361d2a98adc2cbb6"
-dependencies = [
- "coolor",
- "crokey",
- "crossbeam",
- "lazy-regex",
- "minimad",
- "serde",
- "thiserror 2.0.12",
- "unicode-width",
 ]
 
 [[package]]
