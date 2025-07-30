@@ -7,6 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1](https://github.com/hadronomy/bootleg/compare/v0.2.0...v0.2.1)
+
+### 👷 CI/CD
+
+- *(deps)* Bump clap from 4.5.41 to 4.5.42 ([#123](https://github.com/hadronomy/bootleg/pull/123)) - ([f3107da](https://github.com/hadronomy/bootleg/commit/f3107dae5b0e1661404d45f7578da2b065e6c4c4))
+- *(deps)* Bump toml from 0.9.2 to 0.9.3 ([#122](https://github.com/hadronomy/bootleg/pull/122)) - ([e32b84f](https://github.com/hadronomy/bootleg/commit/e32b84f4bd0da76bdc8881e40b199103f8cce7dd))
+- *(deps)* Bump toml from 0.9.1 to 0.9.2 ([#121](https://github.com/hadronomy/bootleg/pull/121)) - ([1497d94](https://github.com/hadronomy/bootleg/commit/1497d944b882e49e7ba9b449560f7d021c75deb4))
+- *(deps)* Bump clap from 4.5.40 to 4.5.41 ([#119](https://github.com/hadronomy/bootleg/pull/119)) - ([dd51c8a](https://github.com/hadronomy/bootleg/commit/dd51c8aa1965a378dacfd016348db760e2d10910))
+- *(deps)* Bump toml from 0.9.0 to 0.9.1 ([#118](https://github.com/hadronomy/bootleg/pull/118)) - ([5ba9949](https://github.com/hadronomy/bootleg/commit/5ba9949bf8d1672de370598dc3348f540b4daa03))
+- *(deps)* Bump human-panic from 2.0.2 to 2.0.3 ([#117](https://github.com/hadronomy/bootleg/pull/117)) - ([0011cf8](https://github.com/hadronomy/bootleg/commit/0011cf8ec7468242185b757c25ee65c0a2171a27))
+- *(deps)* Bump toml from 0.8.23 to 0.9.0 ([#116](https://github.com/hadronomy/bootleg/pull/116)) - ([fa9366e](https://github.com/hadronomy/bootleg/commit/fa9366e63ae64414b8f124f529276faae94cc923))
+- *(deps)* Bump arboard from 3.5.0 to 3.6.0 ([#115](https://github.com/hadronomy/bootleg/pull/115)) - ([04097f7](https://github.com/hadronomy/bootleg/commit/04097f7b6de182d0bb780aab68f4630164b99335))
+- *(deps)* Bump owo-colors from 4.2.1 to 4.2.2 ([#114](https://github.com/hadronomy/bootleg/pull/114)) - ([3bf8a35](https://github.com/hadronomy/bootleg/commit/3bf8a351767ef2aff9bf745af0e7160477a2bb9d))
+- *(deps)* Bump shadow-rs from 1.1.1 to 1.2.0 ([#113](https://github.com/hadronomy/bootleg/pull/113)) - ([1ec43aa](https://github.com/hadronomy/bootleg/commit/1ec43aa0873fbe9d89efe2032b5e9c5629d5e2e6))
+- *(deps)* Bump clap from 4.5.39 to 4.5.40 ([#112](https://github.com/hadronomy/bootleg/pull/112)) - ([8bfd276](https://github.com/hadronomy/bootleg/commit/8bfd276a534f16d4e9127854d2be10acaf41aad3))
+- *(deps)* Bump toml from 0.8.22 to 0.8.23 ([#111](https://github.com/hadronomy/bootleg/pull/111)) - ([722dfe0](https://github.com/hadronomy/bootleg/commit/722dfe0cc3b7fa071b5ec916c1b0b2a99e7b9c47))
+- *(deps)* Bump termimad from 0.32.0 to 0.33.0 ([#110](https://github.com/hadronomy/bootleg/pull/110)) - ([f6000e6](https://github.com/hadronomy/bootleg/commit/f6000e6a3c0d048f98d4bfe47ef95d5de60fa952))
+- *(deps)* Bump clap from 4.5.38 to 4.5.39 ([#109](https://github.com/hadronomy/bootleg/pull/109)) - ([ce8bd7e](https://github.com/hadronomy/bootleg/commit/ce8bd7ef0f9104e798d5ac6a62809456f8e5ec54))
+- *(deps)* Bump taplo from 0.13.2 to 0.14.0 ([#108](https://github.com/hadronomy/bootleg/pull/108)) - ([e241abc](https://github.com/hadronomy/bootleg/commit/e241abc89f108e5272612157f38af9cd08d1c571))
+- *(deps)* Bump owo-colors from 4.2.0 to 4.2.1 ([#107](https://github.com/hadronomy/bootleg/pull/107)) - ([c543ed1](https://github.com/hadronomy/bootleg/commit/c543ed15e4ea327b9c5ef85be4cd0cbc7a6d9a65))
+- *(deps)* Bump clap from 4.5.37 to 4.5.38 ([#106](https://github.com/hadronomy/bootleg/pull/106)) - ([85f2848](https://github.com/hadronomy/bootleg/commit/85f2848bac2bc4b0bccae7c4cb79a437c05302f9))
+- *(deps)* Bump termimad from 0.31.3 to 0.32.0 ([#105](https://github.com/hadronomy/bootleg/pull/105)) - ([f9815bf](https://github.com/hadronomy/bootleg/commit/f9815bf0d7ae0eff840c3f48fb72c28fb990707d))
+- *(deps)* Bump clap-help from 1.3.2 to 1.4.0 ([#104](https://github.com/hadronomy/bootleg/pull/104)) - ([55edc7c](https://github.com/hadronomy/bootleg/commit/55edc7cf814482c095a0ca699290795771305c2e))
+- *(deps)* Bump toml from 0.8.21 to 0.8.22 ([#103](https://github.com/hadronomy/bootleg/pull/103)) - ([9ee6693](https://github.com/hadronomy/bootleg/commit/9ee66939bd30baf136ee1ca803adb096cae7f981))
+- *(deps)* Bump miette from 7.5.0 to 7.6.0 ([#101](https://github.com/hadronomy/bootleg/pull/101)) - ([073995a](https://github.com/hadronomy/bootleg/commit/073995a583f99031da1e3ac2dc105102d33f4aaf))
+- *(deps)* Bump toml from 0.8.20 to 0.8.21 ([#100](https://github.com/hadronomy/bootleg/pull/100)) - ([44cfe85](https://github.com/hadronomy/bootleg/commit/44cfe85ae96cf7accc0144998dc7770998d7cc04))
+- *(deps)* Bump clap from 4.5.36 to 4.5.37 ([#99](https://github.com/hadronomy/bootleg/pull/99)) - ([393831f](https://github.com/hadronomy/bootleg/commit/393831f7fc9112ca3fc15c9033fdd9ff05220802))
+- *(deps)* Bump assert_cmd from 2.0.16 to 2.0.17 ([#97](https://github.com/hadronomy/bootleg/pull/97)) - ([0628c91](https://github.com/hadronomy/bootleg/commit/0628c910f4d8b85de9ca74cf007a63f129bf7ad2))
+- *(deps)* Bump termimad from 0.31.2 to 0.31.3 ([#96](https://github.com/hadronomy/bootleg/pull/96)) - ([8bedcec](https://github.com/hadronomy/bootleg/commit/8bedceca1a882aaadd0956780da793b2dc6483a8))
+- *(deps)* Bump clap from 4.5.35 to 4.5.36 ([#95](https://github.com/hadronomy/bootleg/pull/95)) - ([27b311d](https://github.com/hadronomy/bootleg/commit/27b311ddc681b1a703d5dde105fddd0ac8b6a25e))
+- *(deps)* Bump crossterm from 0.28.1 to 0.29.0 ([#94](https://github.com/hadronomy/bootleg/pull/94)) - ([687df02](https://github.com/hadronomy/bootleg/commit/687df02ad257a8cc392817dadc20087ca29e4ff0))
+- *(deps)* Bump arboard from 3.4.1 to 3.5.0 ([#93](https://github.com/hadronomy/bootleg/pull/93)) - ([6b46f8b](https://github.com/hadronomy/bootleg/commit/6b46f8b225b0a79ea921bd93239b1486feadd2aa))
+- *(deps)* Bump actions/create-github-app-token from 1 to 2 ([#92](https://github.com/hadronomy/bootleg/pull/92)) - ([678a544](https://github.com/hadronomy/bootleg/commit/678a54488fcca964493ea8cb3bff87d5fe198abc))
+- *(deps)* Bump clap from 4.5.34 to 4.5.35 ([#91](https://github.com/hadronomy/bootleg/pull/91)) - ([eb52365](https://github.com/hadronomy/bootleg/commit/eb52365646407cae9bbccbfe34ef98a4a7d0ec0e))
+- *(deps)* Bump clap from 4.5.33 to 4.5.34 ([#90](https://github.com/hadronomy/bootleg/pull/90)) - ([e5347e1](https://github.com/hadronomy/bootleg/commit/e5347e12f4668dc60a81cf2955e30c042e0e57e7))
+- *(deps)* Bump clap from 4.5.32 to 4.5.33 ([#89](https://github.com/hadronomy/bootleg/pull/89)) - ([dabb1ce](https://github.com/hadronomy/bootleg/commit/dabb1ce5f56f5ddb6cba67f74dbec41f8cf556bb))
+- *(deps)* Bump shadow-rs from 1.1.0 to 1.1.1 ([#88](https://github.com/hadronomy/bootleg/pull/88)) - ([59da39c](https://github.com/hadronomy/bootleg/commit/59da39c117dc5b7ab9a9d1e1c6909cc7cae6049a))
+- *(deps)* Bump shadow-rs from 1.0.1 to 1.1.0 ([#87](https://github.com/hadronomy/bootleg/pull/87)) - ([7257b90](https://github.com/hadronomy/bootleg/commit/7257b90a21d186e919be2a7f40bcb53861980cc1))
+- *(deps)* Bump clap from 4.5.31 to 4.5.32 ([#86](https://github.com/hadronomy/bootleg/pull/86)) - ([54b4d33](https://github.com/hadronomy/bootleg/commit/54b4d337fc211e2ad7ed621c69e5683b4b2f7842))
+- *(deps)* Bump serde from 1.0.218 to 1.0.219 ([#85](https://github.com/hadronomy/bootleg/pull/85)) - ([9603a1a](https://github.com/hadronomy/bootleg/commit/9603a1a3f9897d81bcdd3a903200b043f443e680))
+- *(deps)* Bump actions/attest-build-provenance from 1 to 2 ([#83](https://github.com/hadronomy/bootleg/pull/83)) - ([d3bad34](https://github.com/hadronomy/bootleg/commit/d3bad349812fd3c57ead42a6ed1bb3c3a3537436))
+
 ## [0.2.0](https://github.com/hadronomy/bootleg/compare/v0.1.14...v0.2.0)
 
 ### 👷 CI/CD
