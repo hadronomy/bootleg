@@ -25,7 +25,7 @@ human-panic = "2.0.3"
 miette = { version = "7.6.0", features = ["fancy"] }
 owo-colors = { version = "4.2.2", features = ["supports-colors"] }
 serde = { version = "1.0.219", features = ["derive"] }
-shadow-rs = "1.2.0"
+shadow-rs = "1.2.1"
 supports-color = "3.0.2"
 taplo = "0.14.0"
 termimad = "0.33.0"
@@ -47,7 +47,7 @@ inherits = "release"
 lto = "thin"
 
 [build-dependencies]
-shadow-rs = "1.2.0"
+shadow-rs = "1.2.1"
 
 [dev-dependencies]
 assert_cmd = { version = "2.0.17", features = ["color", "color-auto"] }
