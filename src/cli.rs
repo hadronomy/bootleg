@@ -104,7 +104,7 @@ impl Args {
         let color = ansi(190);
         skin.headers[0].compound_style.set_fg(color);
         skin.bold.set_fg(color);
-        skin.italic = termimad::CompoundStyle::with_fg(color);
+        skin.italic.set_fg(color);
         printer.print_help();
     }
 
