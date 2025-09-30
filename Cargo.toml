@@ -23,7 +23,7 @@ const_format = "0.2.34"
 crossterm = "0.29.0"
 human-panic = "2.0.3"
 miette = { version = "7.6.0", features = ["fancy"] }
-owo-colors = { version = "4.2.2", features = ["supports-colors"] }
+owo-colors = { version = "4.2.3", features = ["supports-colors"] }
 serde = { version = "1.0.228", features = ["derive"] }
 shadow-rs = "1.4.0"
 supports-color = "3.0.2"
