@@ -50,5 +50,5 @@ lto = "thin"
 shadow-rs = "1.4.0"
 
 [dev-dependencies]
-assert_cmd = { version = "2.0.17", features = ["color", "color-auto"] }
+assert_cmd = { version = "2.1.1", features = ["color", "color-auto"] }
 predicates = "3.1.3"
