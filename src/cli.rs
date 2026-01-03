@@ -53,6 +53,19 @@ pub struct Args {
     /// The text to copy to the clipboard
     #[arg(name = "TEXT")]
     pub text: Option<String>,
+
+    /// Use a specific pager (defaults to internal bat, then less, or env $PAGER)
+    /// Special values: "bat" (internal), "fzf" (external).
+    #[arg(short = 'p', long)]
+    pub pager: Option<String>,
+
+    /// Specify the language for syntax highlighting (only used if showing output)
+    #[arg(short = 'l', long)]
+    pub lang: Option<String>,
+
+    /// Force plain text output (disable paging and highlighting)
+    #[arg(long, conflicts_with = "pager")]
+    pub plain: bool,
 }
 
 /// Implements the `Args` struct and its associated methods.

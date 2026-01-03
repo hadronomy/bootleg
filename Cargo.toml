@@ -17,6 +17,13 @@ eula = false
 
 [dependencies]
 arboard = "3.6.1"
+bat = { version = "0.26.1", default-features = false, features = [
+  "regex-onig",
+  "paging",
+  "application",
+] }
+shell-words = "1.1.0"
+which = "8.0.0"
 clap = { version = "4.5.53", features = ["derive"] }
 clap-help = "1.5.0"
 const_format = "0.2.35"
