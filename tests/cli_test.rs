@@ -4,8 +4,10 @@ use std::process::Command;
 
 #[test]
 fn print_help() {
-    let mut cmd = Command::cargo_bin("bootleg").unwrap();
-    cmd.arg("--help")
+    let path = assert_cmd::cargo::cargo_bin!("bootleg");
+    let mut bootleg = Command::new(path);
+    bootleg
+        .arg("--help")
         .assert()
         .success()
         .stdout(predicate::str::contains("Examples:"));

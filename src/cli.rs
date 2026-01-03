@@ -24,6 +24,12 @@ static INTRO: &str = formatcp!(
     build::PROJECT_NAME
 );
 
+const VERSION: &str = if build::TAG.is_empty() {
+    formatcp!("{}-dev", build::PKG_VERSION)
+} else {
+    build::PKG_VERSION
+};
+
 static EXAMPLES_TEMPLATE: &str = "
 **Examples:**
 
@@ -40,7 +46,7 @@ ${example-cmd}
 ";
 
 #[derive(Parser, Debug)]
-#[command(name = build::PROJECT_NAME, author, about, disable_help_flag = true)]
+#[command(name = build::PROJECT_NAME, version = VERSION, author, about, disable_help_flag = true)]
 pub struct Args {
     /// Print help
     #[arg(short, long)]
@@ -169,11 +175,7 @@ struct VersionInfoDisplay<'a> {
 impl VersionInfoDisplay<'_> {
     fn new() -> Self {
         #[allow(clippy::const_is_empty)]
-        let pkg_version = if build::TAG.is_empty() {
-            formatcp!("{}-dev", build::PKG_VERSION)
-        } else {
-            build::PKG_VERSION
-        };
+        let pkg_version = VERSION;
 
         #[allow(clippy::const_is_empty)]
         let commit_hash = if !build::GIT_CLEAN {
