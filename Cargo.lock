@@ -283,7 +283,7 @@ dependencies = [
  "shell-words",
  "supports-color 3.0.2",
  "taplo",
- "termimad",
+ "termimad 0.35.0",
  "thiserror 2.0.18",
  "toml 1.1.2+spec-1.1.0",
  "tracing",
@@ -372,7 +372,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "83cb67f01d154c6d278261fbbe09293c24050072e039f19aad3d2592cef103bc"
 dependencies = [
  "clap",
- "termimad",
+ "termimad 0.34.1",
  "terminal-light",
 ]
 
@@ -1337,6 +1337,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "minimad"
+version = "0.16.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de632ee829aec3a874d18a4192eae64a0460b3a45c54ed556b334f6fe5a1d62f"
+dependencies = [
+ "once_cell",
+]
+
+[[package]]
 name = "miniz_oxide"
 version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2233,7 +2242,23 @@ dependencies = [
  "crokey",
  "crossbeam",
  "lazy-regex",
- "minimad",
+ "minimad 0.14.0",
+ "serde",
+ "thiserror 2.0.18",
+ "unicode-width 0.1.11",
+]
+
+[[package]]
+name = "termimad"
+version = "0.35.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "903906afabf58273a7a90b47e0e60701cbd01731ca72ba88508b38b5539647f4"
+dependencies = [
+ "coolor",
+ "crokey",
+ "crossbeam",
+ "lazy-regex",
+ "minimad 0.16.0",
  "serde",
  "thiserror 2.0.18",
  "unicode-width 0.1.11",
