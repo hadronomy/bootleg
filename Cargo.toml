@@ -1,6 +1,6 @@
 [package]
 name = "bootleg"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 license = "MIT"
 description = "A simple cli tool to copy to the clipboard"
