@@ -129,13 +129,12 @@ fn detect_syntax(content: &str) -> Option<&'static str> {
     let bytes = trimmed.as_bytes();
     match (bytes.first(), bytes.last()) {
         (Some(b'{'), Some(b'}')) | (Some(b'['), Some(b']')) => return Some("json"),
-        (Some(b'<'), Some(b'>')) => {
+        (Some(b'<'), Some(b'>'))
             if trimmed.starts_with("<?xml")
                 || trimmed.starts_with("<!DOCTYPE")
-                || trimmed.starts_with("<html")
-            {
-                return Some("html");
-            }
+                || trimmed.starts_with("<html") =>
+        {
+            return Some("html");
         }
         _ => {}
     }
