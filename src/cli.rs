@@ -46,7 +46,7 @@ ${example-cmd}
 ";
 
 #[derive(Parser, Debug)]
-#[command(name = build::PROJECT_NAME, version = VERSION, author, about, disable_help_flag = true)]
+#[command(name = build::PROJECT_NAME, version = VERSION, author, about, disable_help_flag = true, disable_version_flag = true)]
 pub struct Args {
     /// Print help
     #[arg(short, long)]
@@ -77,7 +77,8 @@ pub struct Args {
 /// Implements the `Args` struct and its associated methods.
 impl Args {
     /// Initializes the command-line interface (CLI) and returns an `Args` object.
-    /// ```
+    /// ```no_run
+    /// # use bootleg::cli::Args;
     /// let args = Args::init_cli();
     /// ```
     /// `exit` on error
